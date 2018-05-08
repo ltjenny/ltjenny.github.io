@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>flex布局中，保持内容不超出容器的解决办法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在移动端，flex 布局很好用，它能够根据设备宽度来自动调整容器的宽度，用起来很方便，已经越来越离不开它，但是最近在做项目的时候发现一个问题。 就是在一个设置了 flex:1 的容器中，如果文字很长，这时候文字就会超出容器，而不是呆在设置好的动态剩余的空间中。由于实际项目的比较复杂，不好拿出来说，这里就把问题简化描述如下： 大致是有一个main容器是flex布局，左边一个logo固定宽高，右边co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex布局中，保持内容不超出容器的解决办法">
+<meta property="og:url" content="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在移动端，flex 布局很好用，它能够根据设备宽度来自动调整容器的宽度，用起来很方便，已经越来越离不开它，但是最近在做项目的时候发现一个问题。 就是在一个设置了 flex:1 的容器中，如果文字很长，这时候文字就会超出容器，而不是呆在设置好的动态剩余的空间中。由于实际项目的比较复杂，不好拿出来说，这里就把问题简化描述如下： 大致是有一个main容器是flex布局，左边一个logo固定宽高，右边co">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-08T06:13:29.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="flex布局中，保持内容不超出容器的解决办法">
+<meta name="twitter:description" content="在移动端，flex 布局很好用，它能够根据设备宽度来自动调整容器的宽度，用起来很方便，已经越来越离不开它，但是最近在做项目的时候发现一个问题。 就是在一个设置了 flex:1 的容器中，如果文字很长，这时候文字就会超出容器，而不是呆在设置好的动态剩余的空间中。由于实际项目的比较复杂，不好拿出来说，这里就把问题简化描述如下： 大致是有一个main容器是flex布局，左边一个logo固定宽高，右边co">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-flex布局中，保持内容不超出容器的解决办法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" class="article-date">
+  <time datetime="2018-05-08T03:17:50.000Z" itemprop="datePublished">2018-05-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      flex布局中，保持内容不超出容器的解决办法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在移动端，flex 布局很好用，它能够根据设备宽度来自动调整容器的宽度，用起来很方便，已经越来越离不开它，<br>但是最近在做项目的时候发现一个问题。</p>
+<p>就是在一个设置了 flex:1 的容器中，如果文字很长，这时候文字就会超出容器，而不是呆在设置好的动态剩余的空间中。<br>由于实际项目的比较复杂，不好拿出来说，这里就把问题简化描述如下：</p>
+<p>大致是有一个main容器是flex布局，左边一个logo固定宽高，右边content动态宽度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;main&quot;&gt;</span><br><span class="line">    &lt;img alt=&quot;&quot; class=&quot;logo&quot; src=&quot;pic.jpg&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">        &lt;h4 class=&quot;name&quot;&gt;a name&lt;/h4&gt;</span><br><span class="line">        &lt;p class=&quot;info&quot;&gt;a info&lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;notice&quot;&gt;This is notice content.&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.main &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.logo &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">&#125;</span><br><span class="line">.content &gt; * &#123;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.notice可能会非常长，一些设备下需要隐藏显示，即不换行，并留下省略符…作标记。<br>这里会发现text-overflow: ellipsis不生效，省略符根本没有出现。而且因为设置了 nowrap 会发现文字会将 content 撑开，<br>导致内容超出了屏幕。所以必须要解决这个问题。</p>
+<p>尝试取消父元素.content的flex: 1，无效。<br>尝试取消.main容器的display: flex，省略号出现。</p>
+<p>因此猜测是flex布局的问题，进一步猜测省略符需要对父元素限定宽度。<br>尝试对父元素.content设置width: 100%无效，但是设置width: 0可行。即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">    width: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不设置宽度，.content可以被子节点无限撑开；因此.notice总有足够的宽度在一行内显示所有文本，<br>也就不能触发截断省略的效果。测试还有一种方法可以达到效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">    overflow: hidden；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面的二种方法都可以达到我们需要的效果，即给 content 设置了 flex 为 1 的时候，<br>它会动态的获得父容器的剩余宽度，且不会被自己的子元素把内容撑开。</p>
+<p>经过测试，以下的方法是无效的：</p>
+<p>给html, body设置max-width，元素似乎能强行撑开页宽；<br>给body设置overflow，页宽不能被撑开了，但元素宽度还在，即元素本身还是溢出；<br>给html, body同时设置max-width和overflow，页宽限定在max-width内，元素本身还是溢出；<br>给.main容器设置overflow: hidden，同理.main是不溢出了，.notice本身还是溢出；<br>给.notice元素设置width或max-width，虽然宽度受限，但在特定宽度下省略符…显示不全，有时只显示两个点..</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" data-id="cjgxa4rdq0000nor9xc85jevl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ios中拉动整个页面时会遮住fixed元素问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/08/flex布局中，保持内容不超出容器的解决办法/">flex布局中，保持内容不超出容器的解决办法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/">ios中拉动整个页面时会遮住fixed元素问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/24/walle部署注意事项/">walle部署注意事项</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/my-new-post/">php识别$_FILES变量</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

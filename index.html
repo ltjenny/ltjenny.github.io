@@ -62,6 +62,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-android studio 制作和使用.9.png图注意事项" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/24/android studio 制作和使用.9.png图注意事项/" class="article-date">
+  <time datetime="2019-01-24T02:20:18.000Z" itemprop="datePublished">2019-01-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/24/android studio 制作和使用.9.png图注意事项/">.9.png使用注意事项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用android studio离线打包时，安卓手机分辨率比较多，难以适配，导致启动图在全面屏手机上拉伸，所以使用.9.png图去适配，我的是用vue做的项目，然后用hbuilderx打包app,因为在线打包时间有时候比较长，所以采用了离线打包，<br>但是这个启动图坑了我好几天，如果是从dcloud下载的android打包的示例，那里面只有一个drawable文件夹<br>1.我们先更新最新的sdk<br>2.制作.9.png图<br>3.调试看下手机运行的效果<br>4.如果上面还是没有效果，则建立在drawable同级目录新建drawable-hdpi或者drawable-xhdpi或者drawable-xxxhdpi,将.9.png图复制到文件夹内，然后再测试，这下应该是没什么问题了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/24/android studio 制作和使用.9.png图注意事项/" data-id="cjra05ei20000f8r9pqfc0oio" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-微信和支付宝app登录，支付" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/31/微信和支付宝app登录，支付/" class="article-date">
+  <time datetime="2018-10-31T02:15:18.000Z" itemprop="datePublished">2018-10-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/31/微信和支付宝app登录，支付/">微信qq app登录，微信支付宝app支付</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>微信qq登录：<br>用hbuilder x将vue项目云端打包成app的时候要用自己的证书，包名一定要和在微信申请的包名一致，然后签名也要一致，签名可以用签名工具生成<a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android.apk，然后填到微信和qq申请的应用相关信息里，" target="_blank" rel="noopener">https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android.apk，然后填到微信和qq申请的应用相关信息里，</a><br>审核通过了的直接修改就可以，可能会有一会的缓存，可以等待一会，没通过的要等审核通过后才能用。</p>
+<p>微信支付宝支付：<br>h5+api中request请求中statement参数值订单支付信息，从后台获取，<br>{“appid”:”wx041<strong><em>**</em></strong>d61297”,<br>“noncestr”:”29dfdc1<strong>d9c7ef283cad8ecb1448c8”,<br>“package”:”Sign=WXPay”,<br>“partnerid”:”123***</strong>01”,<br>“prepayid”:”52010<strong><em>0151019c3820473613388ca”,<br>“timestamp”:1445239300,<br>“sign”:”16a5efa393b50**</em></strong>4d6d76e1b2ff703d27”}字符串<br>这些信息不能少了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/31/微信和支付宝app登录，支付/" data-id="cjra05ei70001f8r9zlvrse9s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue打包后解决手机返回直接退出问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/09/12/vue打包后解决手机返回直接退出问题/" class="article-date">
@@ -92,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/12/vue打包后解决手机返回直接退出问题/" data-id="cjlyxk7hc0001c8r9mbzupg8o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/12/vue打包后解决手机返回直接退出问题/" data-id="cjlyxls7d000538r9uwpc4urc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/vue重载页面/" data-id="cjlyxk7hr0004c8r930zcx628" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/15/vue重载页面/" data-id="cjlyxls7e000638r9xghxjfjr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" data-id="cjlyxk7hv0006c8r9armgm9yy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" data-id="cjlyxls71000038r96fsjum5p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/" data-id="cjlyxk7hw0007c8r9wapu3um0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/" data-id="cjlyxls7a000338r9bzr6z63d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +331,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/git本地推到远程/" data-id="cjlyxk7h70000c8r9dxz736md" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/git本地推到远程/" data-id="cjlyxls76000138r9mt54m2xg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -293,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/walle部署注意事项/" data-id="cjlyxk7hq0003c8r9dz6txzd3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/walle部署注意事项/" data-id="cjlyxls7f000738r9ncylp2m8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -330,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/09/my-new-post/" data-id="cjlyxk7hp0002c8r90dy4sbsm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/09/my-new-post/" data-id="cjlyxls7c000438r98fmrw6rt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -375,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/09/hello-world/" data-id="cjlyxk7ht0005c8r9gy6wxhls" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/09/hello-world/" data-id="cjlyxls78000238r9142q6q9u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -403,7 +478,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -416,6 +491,14 @@
       <ul>
         
           <li>
+            <a href="/2019/01/24/android studio 制作和使用.9.png图注意事项/">.9.png使用注意事项</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/31/微信和支付宝app登录，支付/">微信qq app登录，微信支付宝app支付</a>
+          </li>
+        
+          <li>
             <a href="/2018/09/12/vue打包后解决手机返回直接退出问题/">vue打包后解决手机返回直接退出问题</a>
           </li>
         
@@ -425,14 +508,6 @@
         
           <li>
             <a href="/2018/05/08/flex布局中，保持内容不超出容器的解决办法/">flex布局中，保持内容不超出容器的解决办法</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/">ios中拉动整个页面时会遮住fixed元素问题</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/24/git本地推到远程/">walle部署注意事项</a>
           </li>
         
       </ul>
@@ -447,7 +522,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2019 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

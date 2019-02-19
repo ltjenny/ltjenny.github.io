@@ -5,19 +5,19 @@
   
 
   
-  <title>walle部署注意事项 | Hexo</title>
+  <title>&#39;增量包wgtu制作注意事项&#39; | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，版本库是用来存储各个版本的文件夹，需要创建好">
+  <meta name="description" content="首先看文档：http://ask.dcloud.net.cn/article/199 一、文档中提到的注意的内容，拷贝过来加强一下记忆：1.wgtu包中的update.xml文件名称必须全部小写，并且和www在同一级目录中2.wgtu包中www目录下必须包含manifest.json文件，并且里面不能包含注释（HBuilder中默认带注释，需要手动删除所有注释）3.update.xml中的appi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="walle部署注意事项">
-<meta property="og:url" content="http://yoursite.com/2018/04/24/walle部署注意事项/index.html">
+<meta property="og:title" content="&#39;增量包wgtu制作注意事项&#39;">
+<meta property="og:url" content="http://yoursite.com/2019/02/19/增量包wgtu制作注意事项/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，版本库是用来存储各个版本的文件夹，需要创建好">
+<meta property="og:description" content="首先看文档：http://ask.dcloud.net.cn/article/199 一、文档中提到的注意的内容，拷贝过来加强一下记忆：1.wgtu包中的update.xml文件名称必须全部小写，并且和www在同一级目录中2.wgtu包中www目录下必须包含manifest.json文件，并且里面不能包含注释（HBuilder中默认带注释，需要手动删除所有注释）3.update.xml中的appi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T08:05:00.970Z">
+<meta property="og:updated_time" content="2019-02-19T07:49:36.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="walle部署注意事项">
-<meta name="twitter:description" content="walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，版本库是用来存储各个版本的文件夹，需要创建好">
+<meta name="twitter:title" content="&#39;增量包wgtu制作注意事项&#39;">
+<meta name="twitter:description" content="首先看文档：http://ask.dcloud.net.cn/article/199 一、文档中提到的注意的内容，拷贝过来加强一下记忆：1.wgtu包中的update.xml文件名称必须全部小写，并且和www在同一级目录中2.wgtu包中www目录下必须包含manifest.json文件，并且里面不能包含注释（HBuilder中默认带注释，需要手动删除所有注释）3.update.xml中的appi">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-walle部署注意事项" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-增量包wgtu制作注意事项" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/24/walle部署注意事项/" class="article-date">
-  <time datetime="2018-04-24T07:48:18.000Z" itemprop="datePublished">2018-04-24</time>
+    <a href="/2019/02/19/增量包wgtu制作注意事项/" class="article-date">
+  <time datetime="2019-02-19T07:46:39.000Z" itemprop="datePublished">2019-02-19</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      walle部署注意事项
+      &#39;增量包wgtu制作注意事项&#39;
     </h1>
   
 
@@ -86,12 +86,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，<br>版本库是用来存储各个版本的文件夹，需要创建好</p>
+        <p>首先看文档：<a href="http://ask.dcloud.net.cn/article/199" target="_blank" rel="noopener">http://ask.dcloud.net.cn/article/199</a></p>
+<p>一、文档中提到的注意的内容，拷贝过来加强一下记忆：<br>1.wgtu包中的update.xml文件名称必须全部小写，并且和www在同一级目录中<br>2.wgtu包中www目录下必须包含manifest.json文件，并且里面不能包含注释（HBuilder中默认带注释，需要手动删除所有注释）<br>3.update.xml中的appid值是应用的AppID（如“H5F6AE111”），不是程序的包名（如“io.dcloud.H5F6AE1111”）<br>4.wgtu包必须是使用zip格式压缩的文件（不能使用如rar等其它压缩格式） 针对以上的问题，主要讲一下第3点，中间AppID的值，直接使用manifest.json中所定义appid的值即可，保证不会错误。</p>
+<p>二、update.xml内容：</p>
+<ol>
+<li>上面有说到，appid的值的问题。</li>
+<li>这个版本号：1.0.0指的是旧版本的版本号，不是新版本号，一定记住。<br>3.需要删除的文件，path一定要指定正确。</li>
+</ol>
+<p>三、打包：<br>这里要说明一个，切忌生成一个文件夹，然后将www文件夹和update.xml放里边打包，这样是错误的。应该是直接将www文件夹和update.xml打包，打包后的文件随便命名。同时确保www文件夹和update.xml文件处在同级位置上。这里边www文件夹名称不能修改，就叫www。改了就会报IO错误。<br>manifest.json文件中，版本号必须要变更比旧版本号大，如果相同，更新后系统会提示“版本号不一致”。但是没有测试过版本号比就版本号小的情况。</p>
+<p>四、更新测试<br>以上问题全部解决后，仍然无法更新成功，或报：IO错误等。可以将update.xml文件里的内容精简到最低极限，<br>更新包www里边也只放manifest.json文件。待测试更新成功后再一步一步往www文件夹以及update.xml里边添加内容。<br>如果报“找不到update.xml”文件，则请确认是否是直接将www文件夹以及update.xml文件打包，或者update.xml文件所处位置和www文件夹是 同级的。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/walle部署注意事项/" data-id="cjsbgzq840008a4r9al9qucus" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/19/增量包wgtu制作注意事项/" data-id="cjsbgzq810005a4r9qjqmn0mg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -100,19 +108,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/04/24/git本地推到远程/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          walle部署注意事项
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/09/my-new-post/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/01/24/android studio 制作和使用.9.png图注意事项/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">php识别$_FILES变量</div>
+      <div class="article-nav-title">.9.png使用注意事项</div>
     </a>
   
 </nav>

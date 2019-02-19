@@ -91,13 +91,13 @@
 <li>上面有说到，appid的值的问题。</li>
 <li>这个版本号：1.0.0指的是旧版本的版本号，不是新版本号，一定记住。<br>3.需要删除的文件，path一定要指定正确。</li>
 </ol>
-<p>三、打包：<br>这里要说明一个，切忌生成一个文件夹，然后将www文件夹和update.xml放里边打包，这样是错误的。应该是直接将www文件夹和update.xml打包，打包后的文件随便命名。同时确保www文件夹和update.xml文件处在同级位置上。这里边www文件夹名称不能修改，就叫www。改了就会报IO错误。<br>manifest.json文件中，版本号必须要变更比旧版本号大，如果相同，更新后系统会提示“版本号不一致”。但是没有测试过版本号比就版本号小的情况。</p>
+<p>三、打包：<br>这里要说明一个，切忌生成一个文件夹，然后将www文件夹和update.xml放里边打包，这样是错误的。应该是直接将www文件夹和update.xml打包，打包后的文件随便命名。同时确保www文件夹和update.xml文件处在同级位置上。这里边www文件夹名称不能修改，就叫www。改了就会报IO错误。<br>（manifest.json文件中，版本号可以跟必须要变更比旧版本号大，如果相同，更新后系统会提示“版本号不一致”。但是没有测试过版本号比就版本号小的情况。）括号这一块是别人说的，本人的情况是一个游戏大厅里包含子游戏，每个子游戏下载更新的情况下，mainfest.json中的版本号是跟原来版本号一致，也是可以的，没有报错，大于旧版本号也测试过，是没问题的，小于的没测试过。</p>
 <p>四、更新测试<br>以上问题全部解决后，仍然无法更新成功，或报：IO错误等。可以将update.xml文件里的内容精简到最低极限，<br>更新包www里边也只放manifest.json文件。待测试更新成功后再一步一步往www文件夹以及update.xml里边添加内容。<br>如果报“找不到update.xml”文件，则请确认是否是直接将www文件夹以及update.xml文件打包，或者update.xml文件所处位置和www文件夹是 同级的。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/19/增量包wgtu制作注意事项/" data-id="cjsbgzq810005a4r9qjqmn0mg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/19/增量包wgtu制作注意事项/" data-id="cjsblgrf50009lgr9xvcl1wzb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,12 +129,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用android studio离线打包时，安卓手机分辨率比较多，难以适配，导致启动图在全面屏手机上拉伸，所以使用.9.png图去适配，我的是用vue做的项目，然后用hbuilderx打包app,因为在线打包时间有时候比较长，所以采用了离线打包，<br>但是这个启动图坑了我好几天，如果是从dcloud下载的android打包的示例，那里面只有一个drawable文件夹<br>1.我们先更新最新的sdk<br>2.制作.9.png图<br>3.调试看下手机运行的效果<br>4.如果上面还是没有效果，则建立在drawable同级目录新建drawable-hdpi或者drawable-xhdpi或者drawable-xxxhdpi,将.9.png图复制到文件夹内，然后再测试，这下应该是没什么问题了。</p>
+        <p>使用android studio离线打包时，安卓手机分辨率比较多，难以适配，导致启动图在全面屏手机上拉伸，所以使用.9.png图去适配，我的是用vue做的项目，然后用hbuilderx打包app,因为在线打包时间有时候比较长，所以采用了离线打包，<br>但是这个启动图坑了我好几天，如果是从dcloud下载的android打包的示例，那里面只有一个drawable文件夹<br>1.我们先更新最新的sdk<br>2.制作.9.png图<br>3.调试看下手机运行的效果<br>4.如果上面还是没有效果，则建立在drawable同级目录新建drawable-hdpi或者drawable-xhdpi或者drawable-xxxhdpi,将.9.png图复制到这几个文件夹内（只建这其中一个文件夹不行的话就这几个都建），然后再测试，这下应该是没什么问题了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/24/android studio 制作和使用.9.png图注意事项/" data-id="cjsbgzq7r0000a4r9g3o5vuto" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/24/android studio 制作和使用.9.png图注意事项/" data-id="cjsblgrep0000lgr9x4ph05k3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/31/微信和支付宝app登录，支付/" data-id="cjsbgzq820006a4r90tbkhium" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/31/微信和支付宝app登录，支付/" data-id="cjsblgrf6000algr9wxxrj9av" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/12/vue打包后解决手机返回直接退出问题/" data-id="cjsbgzq850009a4r9oznzgrda" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/12/vue打包后解决手机返回直接退出问题/" data-id="cjsblgrf20006lgr9iv16ah2m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/vue重载页面/" data-id="cjsbgzq86000aa4r9ynxd2ahj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/15/vue重载页面/" data-id="cjsblgrf30007lgr93mid65nl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -301,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" data-id="cjsbgzq7z0003a4r9ovs9olqz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/flex布局中，保持内容不超出容器的解决办法/" data-id="cjsblgreu0001lgr9ywtn0uj7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,7 +338,44 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/" data-id="cjsbgzq800004a4r9abtrwi97" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/ios中拉动整个页面时会遮住fixed元素问题/" data-id="cjsblgrf10005lgr9bkt3g8j4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-walle部署注意事项" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/24/walle部署注意事项/" class="article-date">
+  <time datetime="2018-04-24T07:48:18.000Z" itemprop="datePublished">2018-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/24/walle部署注意事项/">walle部署注意事项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，<br>版本库是用来存储各个版本的文件夹，需要创建好</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/24/walle部署注意事项/" data-id="cjsblgrf40008lgr9nsbu9bev" class="article-share-link">Share</a>
       
       
     </footer>
@@ -376,44 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/git本地推到远程/" data-id="cjsbgzq7w0001a4r967y4628x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-walle部署注意事项" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/walle部署注意事项/" class="article-date">
-  <time datetime="2018-04-24T07:48:18.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/walle部署注意事项/">walle部署注意事项</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>walle的目标机webRoot目录在目标机上不用件这个文件目录，只要对用户对webroot有读写权限就行，<br>版本库是用来存储各个版本的文件夹，需要创建好</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/walle部署注意事项/" data-id="cjsbgzq840008a4r9al9qucus" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/git本地推到远程/" data-id="cjsblgrex0002lgr9u3rzcrjx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -450,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/09/my-new-post/" data-id="cjsbgzq7y0002a4r9arwdv2si" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/09/my-new-post/" data-id="cjsblgrf00004lgr93i3vx4ox" class="article-share-link">Share</a>
       
       
     </footer>
